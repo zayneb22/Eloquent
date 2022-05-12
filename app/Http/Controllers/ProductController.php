@@ -59,10 +59,4 @@ class ProductController extends Controller
         $product = Product::find($id)->delete();
         return redirect('/');
     }
-
-    public function edit($id)
-    {
-        $product = Product::find($id);
-        return view('layout.edit', compact('product'));
-    }
 }
